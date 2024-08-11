@@ -12,24 +12,24 @@ const SideBar = () => (
         <img src={`${PUBLIC_URL}/images/me.jpg`} alt="" />
       </Link>
       <header>
-        <h2>Michael D&apos;Angelo</h2>
+        <h2>Yan Min</h2>
         <p>
-          <a href="mailto:michael@mldangelo.com">michael@mldangelo.com</a>
+          <a href="mailto:ryanm.sde@gmail.com">ryanm.sde@gmail.com</a>
         </p>
       </header>
     </section>
 
     <section className="blurb">
       <h2>About</h2>
-      <p>
-        Hi, I&apos;m Michael. I am a{' '}
-        <a href="https://icme.stanford.edu/">Stanford ICME</a> graduate, YC
-        Alumni, and the VP of Engineering at{' '}
-        <a href="https://smileidentity.com">Smile Identity</a>. Previously, I
-        was the co-founder and CTO of <a href="https://arthena.com">Arthena</a>,
-        co-founder of <a href="https://matroid.com">Matroid</a>, and worked at{' '}
-        <a href="https://planet.com">Planet</a> and{' '}
-        <a href="https://facebook.com">Facebook</a>.
+      <p style={{ textAlign: 'justify' }}>
+        Hi, I&apos;m Yan Min. I am currently pursuing a master&apos;s degree in <a href="https://www.eng.mcmaster.ca/ece/">ECE at McMaster</a>.
+        Alongside my studies, I am doing a research internship at <a href="https://noahlab.com.hk/#/home">Huawei Noah&apos;s Ark Lab</a>.
+        My research interests lie in machine learning and computer vision,
+        with a recent focus on 3D gaussian splatting (3DGS).
+        I will graduate in either April or August next year.
+        I am open to co-op opportunities starting in January 2025
+        and full-time positions starting in May 2025.
+        Please feel free to contact me if you have any opportunities.
       </p>
       <ul className="actions">
         <li>
@@ -49,7 +49,7 @@ const SideBar = () => (
     <section id="footer">
       <ContactIcons />
       <p className="copyright">
-        &copy; Michael D&apos;Angelo <Link to="/">mldangelo.com</Link>.
+        &copy; Yan Min <Link to="/">minyan8.github.io</Link>.
       </p>
     </section>
   </section>
