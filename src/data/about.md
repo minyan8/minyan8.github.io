@@ -1,40 +1,26 @@
 # Intro
 
-//TODO
+<div style="text-align: justify;">
+Hi, I&apos;m Yan Min. I am currently pursuing a master&apos;s degree in <a href="https://www.eng.mcmaster.ca/ece/">ECE at McMaster</a>.
+Alongside my studies, I am doing a research internship at <a href="https://noahlab.com.hk/#/home">Huawei Noah&apos;s Ark Lab</a>.
+My research interests lie in machine learning and computer vision,
+with a recent focus on 3D gaussian splatting (3DGS).<br><br>
+I will graduate in either April or August next year.
+I am open to co-op opportunities starting in January 2025
+and full-time positions starting in May 2025.
+Please feel free to contact me if you have any opportunities.
+</div>
+
+# Target Roles
+
+I am seeking opportunities as a __Software Engineer__ or **Machine Learning Engineer**, with a focus on machine learning or computer vision.
 
 # Some history
-
-- //TODO
 
 Ask me in person for other stories that I'm afraid to share with the internet.
 
 # I like
 
-//TODO
-
-<!-- - Running
-- Skiing
-- Sailing and the sea
-- Space
-- Summer
-- [Books](https://www.goodreads.com/mdangelo)
-- Colored pencils ([Faber-Castell Polychromos](https://www.faber-castell.com/products/art-and-graphic/polychromos))
-- Podcasts ([The Daily](https://www.nytimes.com/column/the-daily), [The Ezra Klein Show](https://www.nytimes.com/column/ezra-klein-podcast), [Planet Money](https://www.npr.org/sections/money/), [The Indicator](https://www.npr.org/podcasts/510325/the-indicator-from-planet-money), [This American Life](https://www.thisamericanlife.org/), [99% Invisible](https://99percentinvisible.org/episodes/), [The Economist](http://radio.economist.com/), [Radiolab](https://www.wnycstudios.org/shows/radiolab), [Hidden Brain](https://www.npr.org/series/423302056/hidden-brain), [Inquiring Minds](https://inquiring.show), and others)
-- [Good design](/)
-- [Photography](https://instagram.com/dangelosaurus) -->
-
-# Travel / Geography
-
-//TODO
-
-<!-- - I am originally from Buffalo, New York. I have since lived in Palo Alto, Mountain View, San Francisco, Seattle, and New York City.
-- I've been to approximately 50 countries, some of which I have forgotten, many of which I would like to revisit.
-- In 2016, I visited Canada, Ethiopia, Austria, Germany, Belgium, Ireland, Northern Ireland, Italy, Romania, Sweden, Norway, Svalbard, Panama, Costa Rica, Uganda, Japan, and the UAE, mostly in that order.
-- In 2017, I visited Canada, Japan, Denmark, Germany, Sweden, Estonia, Russia, the Netherlands, Belgium, the U.K., Spain, Iceland, France, Switzerland, Ethiopia, and Luxembourg.
-- In 2018, I visited Canada, France, Italy, Israel, and the U.K.
-- In 2019, I visited Canada, England, France, and Switzerland.
-- In 2020, I traveled barely 20 blocks. I stayed in New York and remodeled an apartment.
-- In 2021, I continued remodeling an apartment.
-- In 2022, I switched jobs and visited the UK, France, Greece, Belgium, Luxembourg, Germany, and Kenya.
-- In 2023, I visited France, the UK, Ireland, and Rwanda.
-- I am an Oregon Trail II enthusiast. -->
+- Reading
+- Traveling
+- Exercising

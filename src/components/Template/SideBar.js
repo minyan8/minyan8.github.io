@@ -26,10 +26,6 @@ const SideBar = () => (
         Alongside my studies, I am doing a research internship at <a href="https://noahlab.com.hk/#/home">Huawei Noah&apos;s Ark Lab</a>.
         My research interests lie in machine learning and computer vision,
         with a recent focus on 3D gaussian splatting (3DGS).
-        I will graduate in either April or August next year.
-        I am open to co-op opportunities starting in January 2025
-        and full-time positions starting in May 2025.
-        Please feel free to contact me if you have any opportunities.
       </p>
       <ul className="actions">
         <li>
@@ -49,7 +45,7 @@ const SideBar = () => (
     <section id="footer">
       <ContactIcons />
       <p className="copyright">
-        &copy; Yan Min <Link to="/">minyan8.github.io</Link>.
+        &copy; Yan Min <Link to="/">minyan.life</Link>.
       </p>
     </section>
   </section>
