@@ -1,7 +1,7 @@
 const degrees = [
   {
     school: 'McMaster University',
-    degree: 'M.A.Sc Electrical and Computer Engineering, GPA: 3.98/4.0',
+    degree: 'M.A.Sc. Electrical and Computer Engineering, GPA: 3.98/4.0',
     link: 'https://www.mcmaster.ca/',
     year: 2025,
   },
