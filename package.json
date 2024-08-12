@@ -1,7 +1,7 @@
 {
   "name": "personal-site",
   "version": "4.0.0",
-  "homepage": "https://minyan.life",
+  "homepage": "https://minyan8.github.io",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -15,7 +15,6 @@
     "build": "rimraf ./build && react-scripts build",
     "lint": "eslint \"**/*.js\"",
     "predeploy": "npm run build && react-snap",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "test": "npx jest"
   },
