@@ -38,13 +38,13 @@ const useInterval = (callback, delay) => {
       }, delay);
       return () => clearInterval(id);
     }
-    return () => {}; // pass linter
+    return () => { }; // pass linter
   }, [delay]);
 };
 
 const EmailLink = ({ loopMessage }) => {
-  const hold = 50; // ticks to wait after message is complete before rendering next message
-  const delay = 50; // tick length in mS
+  const hold = 30; // ticks to wait after message is complete before rendering next message
+  const delay = 30; // tick length in mS
 
   const [idx, updateIter] = useState(0); // points to current message
   const [message, updateMessage] = useState(messages[idx]);
@@ -82,7 +82,7 @@ const EmailLink = ({ loopMessage }) => {
       onMouseEnter={() => setIsActive(false)}
       onMouseLeave={() => idx < messages.length && setIsActive(true)}
     >
-      <a href={validateText(message) ? `mailto:${ryanm.sde}@gmail.com` : ''}>
+      <a href={validateText(message) ? 'mailto:ryanm.sde@gmail.com' : '#'}>
         <span>{message}</span>
         <span>@gmail.com</span>
       </a>
