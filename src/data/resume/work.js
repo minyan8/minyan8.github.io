@@ -13,14 +13,14 @@
  */
 const work = [
   {
-    name: 'Huwei Noah\'s Ark Lab',
+    name: 'Huawei Noah\'s Ark Lab',
     position: 'Research Intern',
     url: 'https://noahlab.com.hk/#/home',
     startDate: '2024-05',
     summary: ' ',
     highlights: [
       'Conducted research on 3D reconstruction utilizing 3D Gaussian Splatting, with applications in 3D object removal and 3D editing.',
-      'Captured various real-world scenes and applied Structure from Motion (SfM) and 3D Gaussian Splatting techniques to reconstruct these scenes, creating an academic dataset for research purposes.',
+      'Captured various real-world scenes and applied Structure from Motion (SfM) and 3D Gaussian Splatting techniques to reconstruct these scenes, creating academic datasets for research purposes.',
       'Developed image processing algorithms using Python and OpenCV.',
     ],
   },

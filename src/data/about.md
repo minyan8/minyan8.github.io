@@ -1,7 +1,7 @@
 # Intro
 
 <div style="text-align: justify;">
-Hi, I&apos;m Yan Min. I am currently pursuing a master&apos;s degree in <a href="https://www.eng.mcmaster.ca/ece/">ECE at McMaster</a>.
+Hi, I&apos;m Yan Min. I am currently pursuing a master's degree in <a href="https://www.eng.mcmaster.ca/ece/">Electrical and Computer Engineering at McMaster University</a>, under the supervision of <a href="https://www.ece.mcmaster.ca/~junchen/">Prof. Jun Chen</a>.
 Alongside my studies, I am doing a research internship at <a href="https://noahlab.com.hk/#/home">Huawei Noah&apos;s Ark Lab</a>.
 My research interests lie in machine learning and computer vision,
 with a recent focus on 3D gaussian splatting (3DGS).<br><br>
