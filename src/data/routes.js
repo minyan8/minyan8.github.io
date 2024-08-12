@@ -1,7 +1,7 @@
 const routes = [
   {
     index: true,
-    label: 'Yan Min 闵岩',
+    label: 'Yan Min',
     path: '/',
   },
   {
