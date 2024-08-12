@@ -17,7 +17,7 @@ I am seeking opportunities as a __Software Engineer__ or **Machine Learning Engi
 
 # Some history
 
-Ask me in person for other stories that I'm afraid to share with the internet.
+Ask me in person for the stories that I'm afraid to share with the internet.
 
 # I like
 
