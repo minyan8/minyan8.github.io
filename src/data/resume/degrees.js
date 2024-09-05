@@ -9,7 +9,7 @@ const degrees = [
     school: 'Nanjing University',
     degree: 'B.E. Automation',
     link: 'https://www.nju.edu.cn/en/',
-    year: 2018,
+    year: 2022,
   },
 ];
 
