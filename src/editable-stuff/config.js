@@ -129,13 +129,13 @@ const publication = {
       img: require("../assets/img/pub1.png"), 
       title: "Towards Scale-Aware Low-Light Enhancement via Structure-Guided Transformer Design", 
       description: "We propose SG-LLIE, a multi-scale CNN-Transformer hybrid framework for Low-Light Image Enhancement (LLIE), guided by robust structure priors instead of relying on semantic features or illumination maps. Our method introduces a Structure-Guided Transformer Block (SGTB) to effectively enhance extremely low-light images and achieves state-of-the-art results across several LLIE benchmarks, ranking second in the NTIRE 2025 Challenge.",
-      link: "https://arxiv.org/pdf/2504.14075"
+      link: "https://openaccess.thecvf.com/content/CVPR2025W/NTIRE/papers/Dong_Towards_Scale-Aware_Low-Light_Enhancement_via_Structure-Guided_Transformer_Design_CVPRW_2025_paper.pdf"
     },
     { 
       img: require("../assets/img/pub2.png"), 
       title: "IMFine: 3D Inpainting via Geometry-guided Multi-view Refinement", 
       description: "We present a novel 3D inpainting approach that handles both front-facing and unconstrained scenes by combining geometric priors, multi-view refinement with test-time adaptation, and a new mask detection technique. Our method delivers consistent visual quality and coherent geometry, significantly outperforming existing methods on a newly introduced, diverse benchmark.",
-      link: "https://arxiv.org/pdf/2503.04501?"
+      link: "https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_IMFine_3D_Inpainting_via_Geometry-guided_Multi-view_Refinement_CVPR_2025_paper.pdf"
     },
   ],
   imageSize: {
