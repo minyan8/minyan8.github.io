@@ -71,7 +71,7 @@ const about = {
       >
         Dr. Jun Chen
       </a>
-      . My experience spans multiple internships in AI and software engineering, along with peer-reviewed publications and patents.
+      . I have been fortunate to gain experience in AI and software engineering through internships, and to contribute to publications and patents.
       <br />
       <br />
       Currently, I am focusing on <strong>AI Agents</strong> and <strong>Multimodal Large Language Models (MLLMs)</strong>, exploring their applications in creative pipelines.
