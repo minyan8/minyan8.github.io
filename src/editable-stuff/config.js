@@ -45,10 +45,66 @@ const about = {
   heading: "About Me",
   imageLink: require("../editable-stuff/me.jpg"),
   imageSize: 375,
-  message:
-    "Hi, I'm Yan Min. I recently completed a thesis-based Master's degree in Electrical and Computer Engineering at McMaster University, under the supervision of Dr. Jun Chen. I have completed several internships in AI and software engineering, and I also have publications and patents. I am currently seeking roles as a Machine Learning Engineer or Researcher. Feel free to reach out if you think I would be a good fit for your team!",
+  message: (
+    <>
+      Hi, I&apos;m Yan Min. I recently completed a thesis-based Master&apos;s degree in Electrical and Computer Engineering at McMaster University, under the supervision of{" "}
+      <a
+        href="https://www.ece.mcmaster.ca/~junchen/"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          color: "#2c3e50", // elegant dark tone
+          fontWeight: "600",
+          textDecoration: "none",
+          borderBottom: "2px solid #3498db", // subtle underline
+          paddingBottom: "2px",
+          transition: "all 0.2s ease-in-out",
+        }}
+        onMouseOver={(e) => {
+          e.target.style.color = "#3498db";
+          e.target.style.borderBottomColor = "#2c3e50";
+        }}
+        onMouseOut={(e) => {
+          e.target.style.color = "#2c3e50";
+          e.target.style.borderBottomColor = "#3498db";
+        }}
+      >
+        Dr. Jun Chen
+      </a>
+      . My experience spans multiple internships in AI and software engineering, along with peer-reviewed publications and patents.
+      <br />
+      <br />
+      Currently, I am focusing on <strong>AI Agents</strong> and <strong>Multimodal Large Language Models (MLLMs)</strong>, exploring their applications in creative pipelines.
+      <br />
+      <br />
+      If you are interested in my work or potential collaboration, feel free to{" "}
+      <a
+        href="mailto:ryanm.sde@gmail.com"
+        style={{
+          color: "#2c3e50",
+          fontWeight: "600",
+          textDecoration: "none",
+          borderBottom: "2px solid #e67e22",
+          paddingBottom: "2px",
+          transition: "all 0.2s ease-in-out",
+        }}
+        onMouseOver={(e) => {
+          e.target.style.color = "#e67e22";
+          e.target.style.borderBottomColor = "#2c3e50";
+        }}
+        onMouseOut={(e) => {
+          e.target.style.color = "#2c3e50";
+          e.target.style.borderBottomColor = "#e67e22";
+        }}
+      >
+        contact me
+      </a>
+      .
+    </>
+  ),
   // resume: "",
 };
+
 
 const jobs = {
   show: true,
