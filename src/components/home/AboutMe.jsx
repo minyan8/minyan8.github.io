@@ -1,7 +1,5 @@
 import React from "react";
-
 import axios from "axios";
-import { Jumbotron } from "./migration";
 
 const pictureLinkRegex = new RegExp(
   /[(http(s)?):(www.)?a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/
@@ -10,7 +8,7 @@ const pictureLinkRegex = new RegExp(
 const AboutMe = ({ heading, message, link, imgSize, resume }) => {
   const [profilePicUrl, setProfilePicUrl] = React.useState("");
   const [showPic, setShowPic] = React.useState(Boolean(link));
-  // https://stackoverflow.com/questions/55840294/how-to-fix-missing-dependency-warning-when-using-useeffect-react-hook
+
   React.useEffect(() => {
     const handleRequest = async () => {
       const instaLink = "https://www.instagram.com/";
@@ -31,42 +29,45 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
     }
   }, [link]);
 
-
-
   return (
-    <Jumbotron id="aboutme" className="m-0">
-      <div className="container row">
-        <div className="col-5 d-none d-lg-block align-self-center">
-          {showPic && (
-            <img
-              className="border border-secondary rounded-circle"
-              src={profilePicUrl}
-              alt="profilepicture"
-              width={imgSize}
-              height={imgSize}
-            />
-          )}
-        </div>
-        <div className={`col-lg-${showPic ? "7" : "12"}`}>
-          <h2 className="display-4 mb-5 text-center">{heading}</h2>
-          <p className="lead text-center">{message}</p>
-          {resume && (
-            <p className="lead text-center">
+    <div id="aboutme" className="py-5 bg-white">
+      <div className="container py-5">
+        <div className="row align-items-center">
+          <div className="col-lg-6 order-lg-2 mb-5 mb-lg-0 text-center">
+            {showPic && (
+              <div className="position-relative d-inline-block">
+                <div className="position-absolute top-0 start-0 w-100 h-100 bg-secondary rounded-circle" style={{ transform: 'scale(0.95)', zIndex: -1 }}></div>
+                <img
+                  className="rounded-circle shadow-lg"
+                  src={profilePicUrl}
+                  alt="profile"
+                  style={{ width: '300px', height: '300px', objectFit: 'cover' }}
+                />
+              </div>
+            )}
+          </div>
+          <div className="col-lg-6 order-lg-1">
+            <span className="text-eyebrow">About Me</span>
+            <h2 className="display-3 mb-4 fw-bold text-primary">{heading}</h2>
+            <p className="lead text-secondary mb-5" style={{ fontSize: '19px', fontWeight: 400, lineHeight: '1.8', letterSpacing: '-0.01em' }}>
+              {message}
+            </p>
+            {resume && (
               <a
-                className="btn btn-outline-dark btn-lg"
+                className="btn-apple"
                 href={resume}
                 target="_blank"
                 rel="noreferrer noopener"
                 role="button"
                 aria-label="Resume/CV"
               >
-                Resume
+                View Resume
               </a>
-            </p>
-          )}
+            )}
+          </div>
         </div>
       </div>
-    </Jumbotron>
+    </div>
   );
 };
 

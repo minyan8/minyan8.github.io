@@ -1,31 +1,37 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Typist from 'react-typist-component';
-import { Jumbotron } from "./migration";
 
 const MainBody = React.forwardRef(
   ({ gradient, title, message, icons }, ref) => {
     return (
-      <Jumbotron
-        fluid
+      <div
         id="home"
-        style={{
-          background: `linear-gradient(136deg,${gradient})`,
-          backgroundSize: "1200% 1200%",
-        }}
-        className="title bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0"
+        className="d-flex flex-column justify-content-center align-items-center min-vh-100 bg-secondary"
+        style={{ paddingTop: '60px' }} // Offset for fixed navbar
       >
-        <div id="stars"></div>
         <Container className="text-center">
-          <h1 ref={ref} className="display-1">
+          <h1 ref={ref} className="display-1 mb-4 text-primary" style={{ fontWeight: 700, letterSpacing: '-0.03em' }}>
             {title}
           </h1>
-          <Typist>
-            <div className="lead typist">
+          <div className="lead mb-5 text-secondary" style={{ fontSize: '24px', maxWidth: '700px', margin: '0 auto' }}>
+            <Typist typingDelay={50}>
               {message}
-            </div>
-          </Typist>
-          <div className="p-5">
+            </Typist>
+          </div>
+
+          <div className="d-flex justify-content-center gap-3 mb-5">
+            <a
+              className="btn-apple"
+              href="#aboutme"
+              role="button"
+              aria-label="Learn more about me"
+            >
+              More about me
+            </a>
+          </div>
+
+          <div className="p-4">
             {icons.map((icon, index) => (
               <a
                 key={`social-icon-${index}`}
@@ -33,21 +39,15 @@ const MainBody = React.forwardRef(
                 rel="noopener noreferrer"
                 href={icon.url}
                 aria-label={`My ${icon.image.split("-")[1]}`}
+                className="mx-3 text-secondary"
+                style={{ fontSize: '24px', transition: 'color 0.2s' }}
               >
-                <i className={`fab ${icon.image}  fa-3x socialicons`} />
+                <i className={`${icon.iconType || 'fab'} ${icon.image}`} />
               </a>
             ))}
           </div>
-          <a
-            className="btn btn-outline-light btn-lg "
-            href="#aboutme"
-            role="button"
-            aria-label="Learn more about me"
-          >
-            More about me
-          </a>
         </Container>
-      </Jumbotron>
+      </div>
     );
   }
 );

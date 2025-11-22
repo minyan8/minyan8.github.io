@@ -1,52 +1,56 @@
 import React from 'react';
-import { Jumbotron } from './migration';
 import {
   Container,
   Row,
   Col,
-  Card,
-  Button
+  Card
 } from "react-bootstrap";
 
 const Publication = ({ publication }) => {
   return (
-    <section className="section">
-      <Container>
-        <Jumbotron className="bg-white">
-          <h2 className="display-4 mb-5 text-center">
-            {publication.heading}
-          </h2>
-          <p className="lead text-center mb-5">
+    <div id="publication" className="py-5 bg-white">
+      <Container className="py-5">
+        <div className="text-center mb-5">
+          <span className="text-eyebrow">Research</span>
+          <h2 className="display-3 fw-bold text-primary">{publication.heading}</h2>
+          <p className="lead text-secondary mx-auto mt-3" style={{ maxWidth: '700px' }}>
             {publication.message}
           </p>
-          <Row>
-            {publication.items.map((item, index) => (
-              <Col md={6} className="mb-4" key={index}>
-                <Card className="h-100 shadow-sm">
-                  <Card.Img 
-                    variant="top" 
-                    src={item.img} 
-                    style={{ width: publication.imageSize.width, height: publication.imageSize.height, objectFit: 'cover' }}
+        </div>
+        <Row className="g-4 justify-content-center">
+          {publication.items.map((item, index) => (
+            <Col md={6} lg={6} className="d-flex align-items-stretch" key={index}>
+              <Card className="h-100 border-0 shadow-sm rounded-4 overflow-hidden hover-lift" style={{ transition: 'transform 0.2s' }}>
+                <div className="overflow-hidden bg-secondary" style={{ minHeight: '240px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Card.Img
+                    variant="top"
+                    src={item.img}
+                    style={{ width: '100%', height: 'auto', objectFit: 'contain', transition: 'transform 0.3s' }}
+                    className="hover-zoom"
                   />
-                  <Card.Body>
-                    <Card.Title>{item.title}</Card.Title>
-                    <Card.Text>{item.description}</Card.Text>
-                    <Button 
-                      variant="primary" 
-                      href={item.link} 
-                      target="_blank" 
+                </div>
+                <Card.Body className="p-4 d-flex flex-column">
+                  <Card.Title className="h5 fw-bold mb-3">{item.title}</Card.Title>
+                  <Card.Text className="text-secondary mb-4 flex-grow-1" style={{ fontSize: '15px' }}>
+                    {item.description}
+                  </Card.Text>
+                  <div className="mt-auto">
+                    <a
+                      href={item.link}
+                      target="_blank"
                       rel="noopener noreferrer"
+                      className="btn-apple-outline btn-sm"
                     >
-                      View Paper
-                    </Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Jumbotron>
+                      Read Paper
+                    </a>
+                  </div>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
       </Container>
-    </section>
+    </div>
   );
 }
 

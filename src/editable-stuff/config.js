@@ -14,14 +14,17 @@ const mainBody = {
     {
       image: "fa-github",
       url: "https://github.com/minyan8",
+      iconType: "fab",
     },
     {
       image: "fa-linkedin",
       url: "https://www.linkedin.com/in/yan-m-081945248/",
+      iconType: "fab",
     },
     {
-      image: "fa-google",
+      image: "ai-google-scholar",
       url: "https://scholar.google.com/citations?user=8bSWUAgAAAAJ&hl=en",
+      iconType: "ai",
     }
   ],
 };
@@ -56,17 +59,17 @@ const about = {
           color: "#2c3e50", // elegant dark tone
           fontWeight: "600",
           textDecoration: "none",
-          borderBottom: "2px solid #3498db", // subtle underline
+          borderBottom: "2px solid #1d1d1f", // black underline
           paddingBottom: "2px",
           transition: "all 0.2s ease-in-out",
         }}
         onMouseOver={(e) => {
-          e.target.style.color = "#3498db";
-          e.target.style.borderBottomColor = "#2c3e50";
+          e.target.style.color = "#1d1d1f";
+          e.target.style.borderBottomColor = "#86868b";
         }}
         onMouseOut={(e) => {
           e.target.style.color = "#2c3e50";
-          e.target.style.borderBottomColor = "#3498db";
+          e.target.style.borderBottomColor = "#1d1d1f";
         }}
       >
         Dr. Jun Chen
@@ -84,17 +87,17 @@ const about = {
           color: "#2c3e50",
           fontWeight: "600",
           textDecoration: "none",
-          borderBottom: "2px solid #e67e22",
+          borderBottom: "2px solid #1d1d1f",
           paddingBottom: "2px",
           transition: "all 0.2s ease-in-out",
         }}
         onMouseOver={(e) => {
-          e.target.style.color = "#e67e22";
-          e.target.style.borderBottomColor = "#2c3e50";
+          e.target.style.color = "#1d1d1f";
+          e.target.style.borderBottomColor = "#86868b";
         }}
         onMouseOut={(e) => {
           e.target.style.color = "#2c3e50";
-          e.target.style.borderBottomColor = "#e67e22";
+          e.target.style.borderBottomColor = "#1d1d1f";
         }}
       >
         contact me
@@ -147,6 +150,16 @@ const repos = {
   gitHubUsername: "minyan8", //i.e."johnDoe12Gh"
   reposLength: 0,
   specificRepos: ["imagine", "RainHistoNet"],
+  projectImages: [
+    {
+      repoName: "imagine",
+      image: require("../assets/img/pub1.png"),
+    },
+    {
+      repoName: "RainHistoNet",
+      image: require("../assets/img/pub2.png"),
+    },
+  ],
 };
 
 // Leadership SECTION
@@ -156,20 +169,20 @@ const leadership = {
   message:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.",
   images: [
-    { 
-      img: require("../editable-stuff/me.jpg"), 
-      label: "First slide label", 
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    {
+      img: require("../editable-stuff/me.jpg"),
+      label: "First slide label",
+      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum."
     },
-    { 
-      img: require("../editable-stuff/me.jpg"), 
-      label: "Second slide label", 
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    {
+      img: require("../editable-stuff/me.jpg"),
+      label: "Second slide label",
+      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum."
     },
   ],
   imageSize: {
-    width:"615",
-    height:"450"
+    width: "615",
+    height: "450"
   }
 };
 
@@ -181,15 +194,15 @@ const publication = {
   message:
     "Here are some of my selected research publications and articles, highlighting my work in machine learning, computer vision, and artificial intelligence.",
   items: [
-    { 
-      img: require("../assets/img/pub1.png"), 
-      title: "Towards Scale-Aware Low-Light Enhancement via Structure-Guided Transformer Design", 
+    {
+      img: require("../assets/img/pub1.png"),
+      title: "Towards Scale-Aware Low-Light Enhancement via Structure-Guided Transformer Design",
       description: "We propose SG-LLIE, a multi-scale CNN-Transformer hybrid framework for Low-Light Image Enhancement (LLIE), guided by robust structure priors instead of relying on semantic features or illumination maps. Our method introduces a Structure-Guided Transformer Block (SGTB) to effectively enhance extremely low-light images and achieves state-of-the-art results across several LLIE benchmarks, ranking second in the NTIRE 2025 Challenge.",
       link: "https://openaccess.thecvf.com/content/CVPR2025W/NTIRE/papers/Dong_Towards_Scale-Aware_Low-Light_Enhancement_via_Structure-Guided_Transformer_Design_CVPRW_2025_paper.pdf"
     },
-    { 
-      img: require("../assets/img/pub2.png"), 
-      title: "IMFine: 3D Inpainting via Geometry-guided Multi-view Refinement", 
+    {
+      img: require("../assets/img/pub2.png"),
+      title: "IMFine: 3D Inpainting via Geometry-guided Multi-view Refinement",
       description: "We present a novel 3D inpainting approach that handles both front-facing and unconstrained scenes by combining geometric priors, multi-view refinement with test-time adaptation, and a new mask detection technique. Our method delivers consistent visual quality and coherent geometry, significantly outperforming existing methods on a newly introduced, diverse benchmark.",
       link: "https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_IMFine_3D_Inpainting_via_Geometry-guided_Multi-view_Refinement_CVPR_2025_paper.pdf"
     },
@@ -262,7 +275,7 @@ const experiences = {
       date: "Sep 2018 – Jun 2022",
     },
     {
-      role: "M.A.Sc. in Electrical and Computer Engineering, McMaster University (GPA: 4.0/4.0)", 
+      role: "M.A.Sc. in Electrical and Computer Engineering, McMaster University (GPA: 4.0/4.0)",
       companylogo: require("../assets/img/mac.png"),
       date: "Sep 2023 – Apr 2025",
     },

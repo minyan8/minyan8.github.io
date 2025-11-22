@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Container from "react-bootstrap/Container";
-import { Jumbotron } from "./migration";
 import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import ProjectCard from "./ProjectCard";
 import axios from "axios";
+import { repos } from "../../editable-stuff/config.js";
 
 const dummyProject = {
   name: null,
@@ -14,8 +15,6 @@ const dummyProject = {
   pushed_at: null,
 };
 const API = "https://api.github.com";
-// const gitHubQuery = "/repos?sort=updated&direction=desc";
-// const specficQuerry = "https://api.github.com/repos/hashirshoaeb/";
 
 const Project = ({ heading, username, length, specfic }) => {
   const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
@@ -29,11 +28,8 @@ const Project = ({ heading, username, length, specfic }) => {
   const fetchRepos = useCallback(async () => {
     let repoList = [];
     try {
-      // getting all repos
       const response = await axios.get(allReposAPI);
-      // slicing to the length
       repoList = [...response.data.slice(0, length)];
-      // adding specified repos
       try {
         for (let repoName of specfic) {
           const response = await axios.get(`${specficReposAPI}/${repoName}`);
@@ -42,8 +38,6 @@ const Project = ({ heading, username, length, specfic }) => {
       } catch (error) {
         console.error(error.message);
       }
-      // setting projectArray
-      // TODO: remove the duplication.
       setProjectsArray(repoList);
     } catch (error) {
       console.error(error.message);
@@ -54,29 +48,48 @@ const Project = ({ heading, username, length, specfic }) => {
     fetchRepos();
   }, [fetchRepos]);
 
+  const getProjectImage = (repoName) => {
+    if (!repos.projectImages || !Array.isArray(repos.projectImages)) {
+      return null;
+    }
+    const projectImage = repos.projectImages.find(
+      (img) => img.repoName === repoName
+    );
+    return projectImage ? projectImage.image : null;
+  };
+
   return (
-    <Jumbotron fluid id="projects" className="bg-light m-0">
-      <Container className="">
-        <h2 className="display-4 pb-5 text-center">{heading}</h2>
-        <Row>
+    <div id="projects" className="py-5 bg-secondary">
+      <Container className="py-5">
+        <div className="text-center mb-5">
+          <span className="text-eyebrow">Portfolio</span>
+          <h2 className="display-3 fw-bold text-primary">{heading}</h2>
+        </div>
+        <Row className="g-4 justify-content-center">
           {projectsArray.length
             ? projectsArray.map((project, index) => (
-              <ProjectCard
-                key={`project-card-${index}`}
-                id={`project-card-${index}`}
-                value={project}
-              />
+              <Col key={`project-card-${index}`} md={6} lg={6} className="d-flex align-items-stretch">
+                <ProjectCard
+                  value={project}
+                  imgPath={getProjectImage(project.name)}
+                />
+              </Col>
             ))
             : dummyProjectsArr.map((project, index) => (
-              <ProjectCard
-                key={`dummy-${index}`}
-                id={`dummy-${index}`}
-                value={project}
-              />
+              <Col key={`dummy-${index}`} md={6} lg={6} className="d-flex align-items-stretch">
+                <ProjectCard
+                  value={project}
+                />
+              </Col>
             ))}
         </Row>
+        <div className="text-center mt-5">
+          <a href={`https://github.com/${username}`} target="_blank" rel="noreferrer" className="btn-apple-outline">
+            View All Projects <i className="fas fa-arrow-right ms-2"></i>
+          </a>
+        </div>
       </Container>
-    </Jumbotron>
+    </div>
   );
 };
 

@@ -2,27 +2,18 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 
 const Footer = (props) => {
-  const bgStyle = { backgroundColor: "#f5f5f5" };
-
   return (
-    <footer style={bgStyle} className="mt-auto py-5 text-center ">
+    <footer className="mt-auto py-5 text-center bg-secondary border-top border-light">
       <Container>
         {props.children}
-        <i className="fas fa-code" /> with <i className="fas fa-heart" /> by{" "}
-        <a
-          rel="noopener"
-          href="https://github.com/minyan8"
-          aria-label="My GitHub"
-        > <span className="badge bg-dark">
-            Yan Min
-          </span>
-        </a>{" "}
-        using <i className="fab fa-react" />
-        <p>
-          <small className="text-muted">
-          Precision. Passion. Progress.
-          </small>
-        </p>
+        <div className="mt-5 text-secondary" style={{ fontSize: '12px' }}>
+          <p className="mb-2">
+            Designed and developed by <span className="text-primary fw-bold">Yan Min</span>
+          </p>
+          <p className="mb-0 opacity-75">
+            Built with React & Bootstrap. Precision. Passion. Progress.
+          </p>
+        </div>
       </Container>
     </footer>
   );

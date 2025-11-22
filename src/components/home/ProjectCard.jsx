@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useCallback } from "react";
-import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Skeleton from "react-loading-skeleton";
 import axios from "axios";
 
-const ProjectCard = ({ value }) => {
+const ProjectCard = ({ value, imgPath }) => {
   const {
     name,
     description,
@@ -14,13 +13,28 @@ const ProjectCard = ({ value }) => {
     pushed_at,
   } = value;
   return (
-    <Col md={6}>
-      <Card className="card shadow-lg p-3 mb-5 bg-white rounded">
-        <Card.Body>
-          <Card.Title as="h5">{name || <Skeleton />} </Card.Title>
-          <Card.Text>{(!description) ? "" : description || <Skeleton count={3} />} </Card.Text>
+    <Card className="card shadow-sm h-100 border-0 rounded-4 overflow-hidden hover-lift" style={{ transition: 'transform 0.2s' }}>
+      {imgPath && (
+        <div className="overflow-hidden" style={{ height: '240px' }}>
+          <Card.Img
+            variant="top"
+            src={imgPath}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s' }}
+            className="hover-zoom"
+          />
+        </div>
+      )}
+      <Card.Body className="p-4 d-flex flex-column">
+        <Card.Title as="h5" className="mb-3" style={{ fontWeight: 600 }}>
+          {name || <Skeleton />}
+        </Card.Title>
+        <Card.Text className="text-secondary mb-4 flex-grow-1">
+          {(!description) ? "" : description || <Skeleton count={3} />}
+        </Card.Text>
+
+        <div className="mt-auto">
           {svn_url ? <CardButtons svn_url={svn_url} /> : <Skeleton count={2} />}
-          <hr />
+          <hr className="my-4 opacity-10" />
           {languages_url ? (
             <Language languages_url={languages_url} repo_url={svn_url} />
           ) : (
@@ -31,9 +45,9 @@ const ProjectCard = ({ value }) => {
           ) : (
             <Skeleton />
           )}
-        </Card.Body>
-      </Card>
-    </Col>
+        </div>
+      </Card.Body>
+    </Card>
   );
 };
 
@@ -42,12 +56,18 @@ const CardButtons = ({ svn_url }) => {
     <div className="d-grid gap-2 d-md-block">
       <a
         href={`${svn_url}/archive/master.zip`}
-        className="btn btn-outline-secondary mx-2"
+        className="btn btn-apple-outline btn-sm me-2"
+        style={{ fontSize: '14px', padding: '8px 16px' }}
       >
-        <i className="fab fa-github" /> Clone Project
+        <i className="fab fa-github me-2" /> Clone
       </a>
-      <a href={svn_url} target=" _blank" className="btn btn-outline-secondary mx-2">
-        <i className="fab fa-github" /> Repo
+      <a
+        href={svn_url}
+        target=" _blank"
+        className="btn btn-apple-outline btn-sm"
+        style={{ fontSize: '14px', padding: '8px 16px' }}
+      >
+        <i className="fab fa-github me-2" /> Repo
       </a>
     </div>
   );
@@ -78,24 +98,26 @@ const Language = ({ languages_url, repo_url }) => {
 
   return (
     <div className="pb-3">
-      Languages:{" "}
-      {array.length
-        ? array.map((language) => (
-          <a
-            key={language}
-            className="card-link"
-            href={repo_url + `/search?l=${language}`}
-            target=" _blank"
-            rel="noopener noreferrer"
-          >
-            <span className="badge bg-light text-dark">
-              {language}:{" "}
-              {Math.trunc((data[language] / total_count) * 1000) / 10} %
-            </span>
-          </a>
+      <small className="text-secondary text-uppercase fw-bold" style={{ fontSize: '11px', letterSpacing: '1px' }}>Languages</small>
+      <div className="mt-2">
+        {array.length
+          ? array.map((language) => (
+            <a
+              key={language}
+              className="text-decoration-none me-2 mb-2 d-inline-block"
+              href={repo_url + `/search?l=${language}`}
+              target=" _blank"
+              rel="noopener noreferrer"
+            >
+              <span className="badge bg-secondary text-dark bg-opacity-10 border border-secondary border-opacity-10 rounded-pill px-3 py-2 fw-normal">
+                {language}:{" "}
+                {Math.trunc((data[language] / total_count) * 1000) / 10} %
+              </span>
+            </a>
 
-        ))
-        : "code yet to be deployed."}
+          ))
+          : "code yet to be deployed."}
+      </div>
     </div>
   );
 };
@@ -125,19 +147,20 @@ const CardFooter = ({ star_count, repo_url, pushed_at }) => {
   }, [handleUpdatetime]);
 
   return (
-    <p className="card-text">
+    <div className="d-flex justify-content-between align-items-center">
       <a
         href={repo_url + "/stargazers"}
         target=" _blank"
-        className="text-dark text-decoration-none"
+        className="text-secondary text-decoration-none"
       >
-        <span className="text-dark card-link mr-4">
-          <i className="fab fa-github" /> Stars{" "}
-          <span className="badge badge-dark">{star_count}</span>
+        <span className="d-flex align-items-center">
+          <i className="fab fa-github me-2" />
+          <span className="me-1">Stars</span>
+          <span className="badge bg-dark text-white rounded-pill">{star_count}</span>
         </span>
       </a>
       <small className="text-muted">Updated {updated_at}</small>
-    </p>
+    </div>
   );
 };
 
