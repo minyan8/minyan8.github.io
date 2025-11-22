@@ -25,7 +25,7 @@ const mainBody = {
       image: "ai-google-scholar",
       url: "https://scholar.google.com/citations?user=8bSWUAgAAAAJ&hl=en",
       iconType: "ai",
-    }
+    },
   ],
 };
 
@@ -50,7 +50,9 @@ const about = {
   imageSize: 375,
   message: (
     <>
-      Hi, I&apos;m Yan Min. I recently completed a thesis-based Master&apos;s degree in Electrical and Computer Engineering at McMaster University, under the supervision of{" "}
+      Hi, I&apos;m Yan Min. I recently completed a thesis-based Master&apos;s
+      degree in Electrical and Computer Engineering at McMaster University,
+      under the supervision of{" "}
       <a
         href="https://www.ece.mcmaster.ca/~junchen/"
         target="_blank"
@@ -74,10 +76,13 @@ const about = {
       >
         Dr. Jun Chen
       </a>
-      . I have been fortunate to gain experience in AI and software engineering through internships, and to contribute to publications and patents.
+      . I have been fortunate to gain experience in AI and software engineering
+      through internships, and to contribute to publications and patents.
       <br />
       <br />
-      Currently, I am focusing on <strong>AI Agents</strong> and <strong>Multimodal Large Language Models (MLLMs)</strong>, exploring their applications in creative pipelines.
+      Currently, I am focusing on <strong>AI Agents</strong> and{" "}
+      <strong>Multimodal Large Language Models (MLLMs)</strong>, exploring their
+      applications in creative pipelines.
       <br />
       <br />
       If you are interested in my work or potential collaboration, feel free to{" "}
@@ -108,7 +113,6 @@ const about = {
   // resume: "",
 };
 
-
 const jobs = {
   show: true,
   heading: "Work Experience",
@@ -137,7 +141,6 @@ const jobs = {
     },
   ],
 };
-
 
 // PROJECTS SECTION
 // Setting up project lenght will automatically fetch your that number of recently updated projects, or you can set this field 0 to show none.
@@ -172,18 +175,18 @@ const leadership = {
     {
       img: require("../editable-stuff/me.jpg"),
       label: "First slide label",
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum."
+      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
     },
     {
       img: require("../editable-stuff/me.jpg"),
       label: "Second slide label",
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum."
+      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
     },
   ],
   imageSize: {
     width: "615",
-    height: "450"
-  }
+    height: "450",
+  },
 };
 
 // Publication SECTION
@@ -196,24 +199,25 @@ const publication = {
   items: [
     {
       img: require("../assets/img/pub1.png"),
-      title: "Towards Scale-Aware Low-Light Enhancement via Structure-Guided Transformer Design",
-      description: "We propose SG-LLIE, a multi-scale CNN-Transformer hybrid framework for Low-Light Image Enhancement (LLIE), guided by robust structure priors instead of relying on semantic features or illumination maps. Our method introduces a Structure-Guided Transformer Block (SGTB) to effectively enhance extremely low-light images and achieves state-of-the-art results across several LLIE benchmarks, ranking second in the NTIRE 2025 Challenge.",
-      link: "https://openaccess.thecvf.com/content/CVPR2025W/NTIRE/papers/Dong_Towards_Scale-Aware_Low-Light_Enhancement_via_Structure-Guided_Transformer_Design_CVPRW_2025_paper.pdf"
+      title:
+        "Towards Scale-Aware Low-Light Enhancement via Structure-Guided Transformer Design",
+      description:
+        "We propose SG-LLIE, a multi-scale CNN-Transformer hybrid framework for Low-Light Image Enhancement (LLIE), guided by robust structure priors instead of relying on semantic features or illumination maps. Our method introduces a Structure-Guided Transformer Block (SGTB) to effectively enhance extremely low-light images and achieves state-of-the-art results across several LLIE benchmarks, ranking second in the NTIRE 2025 Challenge.",
+      link: "https://openaccess.thecvf.com/content/CVPR2025W/NTIRE/papers/Dong_Towards_Scale-Aware_Low-Light_Enhancement_via_Structure-Guided_Transformer_Design_CVPRW_2025_paper.pdf",
     },
     {
       img: require("../assets/img/pub2.png"),
       title: "IMFine: 3D Inpainting via Geometry-guided Multi-view Refinement",
-      description: "We present a novel 3D inpainting approach that handles both front-facing and unconstrained scenes by combining geometric priors, multi-view refinement with test-time adaptation, and a new mask detection technique. Our method delivers consistent visual quality and coherent geometry, significantly outperforming existing methods on a newly introduced, diverse benchmark.",
-      link: "https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_IMFine_3D_Inpainting_via_Geometry-guided_Multi-view_Refinement_CVPR_2025_paper.pdf"
+      description:
+        "We present a novel 3D inpainting approach that handles both front-facing and unconstrained scenes by combining geometric priors, multi-view refinement with test-time adaptation, and a new mask detection technique. Our method delivers consistent visual quality and coherent geometry, significantly outperforming existing methods on a newly introduced, diverse benchmark.",
+      link: "https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_IMFine_3D_Inpainting_via_Geometry-guided_Multi-view_Refinement_CVPR_2025_paper.pdf",
     },
   ],
   imageSize: {
     width: "615",
-    height: "450"
-  }
+    height: "450",
+  },
 };
-
-
 
 // SKILLS SECTION
 const skills = {
@@ -253,15 +257,19 @@ const skills = {
     { name: "Data Pipelines", value: 100 },
     { name: "Experiment Tracking", value: 100 },
   ],
+  languages: [
+    { name: "English", value: 100 },
+    { name: "French", value: 100 },
+    { name: "Mandarin", value: 100 },
+  ],
 };
-
 
 // GET IN TOUCH SECTION
 const getInTouch = {
   show: true,
   heading: "Get In Touch",
   message:
-    "I'm currently looking for full-time Machine Learning Engineer/Software Developer opportunities. Please email me at",
+    "Whether you have a question or just want to say hi, feel free to email me at",
   email: "ryanm.sde@gmail.com",
 };
 
@@ -282,10 +290,20 @@ const experiences = {
   ],
 };
 
-
 // // Blog SECTION
 // const blog = {
 //   show: true,
 // };
 
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences, jobs, publication };
+export {
+  navBar,
+  mainBody,
+  about,
+  repos,
+  skills,
+  leadership,
+  getInTouch,
+  experiences,
+  jobs,
+  publication,
+};

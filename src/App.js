@@ -10,7 +10,7 @@ import {
   getInTouch,
   experiences,
   jobs,
-  publication
+  publication,
 } from "./editable-stuff/config.js";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
@@ -47,9 +47,7 @@ const Home = React.forwardRef((props, ref) => {
           resume={about.resume}
         />
       )}
-      {experiences.show && (
-        <Experience experiences={experiences} />
-      )}
+      {experiences.show && <Experience experiences={experiences} />}
       {jobs.show && (
         <div id="workexperience">
           <WorkExperience />
@@ -81,9 +79,9 @@ const Home = React.forwardRef((props, ref) => {
           heading={skills.heading}
           hardSkills={skills.hardSkills}
           softSkills={skills.softSkills}
+          languages={skills.languages}
         />
       )}
-      
     </>
   );
 });

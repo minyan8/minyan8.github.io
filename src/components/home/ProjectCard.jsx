@@ -13,23 +13,16 @@ const ProjectCard = ({ value, imgPath }) => {
     pushed_at,
   } = value;
   return (
-    <Card className="card shadow-sm h-100 border-0 rounded-4 overflow-hidden hover-lift" style={{ transition: 'transform 0.2s' }}>
-      {imgPath && (
-        <div className="overflow-hidden" style={{ height: '240px' }}>
-          <Card.Img
-            variant="top"
-            src={imgPath}
-            style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s' }}
-            className="hover-zoom"
-          />
-        </div>
-      )}
+    <Card
+      className="card shadow-sm h-100 border-0 rounded-4 overflow-hidden hover-lift"
+      style={{ transition: "transform 0.2s" }}
+    >
       <Card.Body className="p-4 d-flex flex-column">
         <Card.Title as="h5" className="mb-3" style={{ fontWeight: 600 }}>
           {name || <Skeleton />}
         </Card.Title>
         <Card.Text className="text-secondary mb-4 flex-grow-1">
-          {(!description) ? "" : description || <Skeleton count={3} />}
+          {!description ? "" : description || <Skeleton count={3} />}
         </Card.Text>
 
         <div className="mt-auto">
@@ -41,7 +34,11 @@ const ProjectCard = ({ value, imgPath }) => {
             <Skeleton count={3} />
           )}
           {value ? (
-            <CardFooter star_count={stargazers_count} repo_url={svn_url} pushed_at={pushed_at} />
+            <CardFooter
+              star_count={stargazers_count}
+              repo_url={svn_url}
+              pushed_at={pushed_at}
+            />
           ) : (
             <Skeleton />
           )}
@@ -57,7 +54,7 @@ const CardButtons = ({ svn_url }) => {
       <a
         href={`${svn_url}/archive/master.zip`}
         className="btn btn-apple-outline btn-sm me-2"
-        style={{ fontSize: '14px', padding: '8px 16px' }}
+        style={{ fontSize: "14px", padding: "8px 16px" }}
       >
         <i className="fab fa-github me-2" /> Clone
       </a>
@@ -65,7 +62,7 @@ const CardButtons = ({ svn_url }) => {
         href={svn_url}
         target=" _blank"
         className="btn btn-apple-outline btn-sm"
-        style={{ fontSize: '14px', padding: '8px 16px' }}
+        style={{ fontSize: "14px", padding: "8px 16px" }}
       >
         <i className="fab fa-github me-2" /> Repo
       </a>
@@ -98,24 +95,28 @@ const Language = ({ languages_url, repo_url }) => {
 
   return (
     <div className="pb-3">
-      <small className="text-secondary text-uppercase fw-bold" style={{ fontSize: '11px', letterSpacing: '1px' }}>Languages</small>
+      <small
+        className="text-secondary text-uppercase fw-bold"
+        style={{ fontSize: "11px", letterSpacing: "1px" }}
+      >
+        Languages
+      </small>
       <div className="mt-2">
         {array.length
           ? array.map((language) => (
-            <a
-              key={language}
-              className="text-decoration-none me-2 mb-2 d-inline-block"
-              href={repo_url + `/search?l=${language}`}
-              target=" _blank"
-              rel="noopener noreferrer"
-            >
-              <span className="badge bg-secondary text-dark bg-opacity-10 border border-secondary border-opacity-10 rounded-pill px-3 py-2 fw-normal">
-                {language}:{" "}
-                {Math.trunc((data[language] / total_count) * 1000) / 10} %
-              </span>
-            </a>
-
-          ))
+              <a
+                key={language}
+                className="text-decoration-none me-2 mb-2 d-inline-block"
+                href={repo_url + `/search?l=${language}`}
+                target=" _blank"
+                rel="noopener noreferrer"
+              >
+                <span className="badge bg-secondary text-dark bg-opacity-10 border border-secondary border-opacity-10 rounded-pill px-3 py-2 fw-normal">
+                  {language}:{" "}
+                  {Math.trunc((data[language] / total_count) * 1000) / 10} %
+                </span>
+              </a>
+            ))
           : "code yet to be deployed."}
       </div>
     </div>
@@ -156,7 +157,9 @@ const CardFooter = ({ star_count, repo_url, pushed_at }) => {
         <span className="d-flex align-items-center">
           <i className="fab fa-github me-2" />
           <span className="me-1">Stars</span>
-          <span className="badge bg-dark text-white rounded-pill">{star_count}</span>
+          <span className="badge bg-dark text-white rounded-pill">
+            {star_count}
+          </span>
         </span>
       </a>
       <small className="text-muted">Updated {updated_at}</small>

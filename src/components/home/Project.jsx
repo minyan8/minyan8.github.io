@@ -68,23 +68,36 @@ const Project = ({ heading, username, length, specfic }) => {
         <Row className="g-4 justify-content-center">
           {projectsArray.length
             ? projectsArray.map((project, index) => (
-              <Col key={`project-card-${index}`} md={6} lg={6} className="d-flex align-items-stretch">
-                <ProjectCard
-                  value={project}
-                  imgPath={getProjectImage(project.name)}
-                />
-              </Col>
-            ))
+                <Col
+                  key={`project-card-${index}`}
+                  md={6}
+                  lg={6}
+                  className="d-flex align-items-stretch"
+                >
+                  <ProjectCard
+                    value={project}
+                    imgPath={getProjectImage(project.name)}
+                  />
+                </Col>
+              ))
             : dummyProjectsArr.map((project, index) => (
-              <Col key={`dummy-${index}`} md={6} lg={6} className="d-flex align-items-stretch">
-                <ProjectCard
-                  value={project}
-                />
-              </Col>
-            ))}
+                <Col
+                  key={`dummy-${index}`}
+                  md={6}
+                  lg={6}
+                  className="d-flex align-items-stretch"
+                >
+                  <ProjectCard value={project} />
+                </Col>
+              ))}
         </Row>
         <div className="text-center mt-5">
-          <a href={`https://github.com/${username}`} target="_blank" rel="noreferrer" className="btn-apple-outline">
+          <a
+            href={`https://github.com/${username}`}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-apple-outline"
+          >
             View All Projects <i className="fas fa-arrow-right ms-2"></i>
           </a>
         </div>
