@@ -45,21 +45,21 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
                   src={profilePicUrl}
                   alt="profile"
                   style={{
-                    width: "350px",
-                    height: "350px",
+                    width: "min(350px, 85vw)",
+                    height: "min(350px, 85vw)",
                     objectFit: "cover",
                   }}
                 />
               </div>
             )}
           </div>
-          <div className="col-lg-6 order-lg-1">
+          <div className="col-lg-6 order-lg-1 px-4">
             <span className="text-eyebrow">About Me</span>
-            <h2 className="display-3 mb-4 fw-bold text-primary">{heading}</h2>
+            <h2 className="display-3 mb-4 fw-bold text-primary" style={{ fontSize: "clamp(2rem, 5vw, 3rem)" }}>{heading}</h2>
             <p
               className="lead mb-5"
               style={{
-                fontSize: "19px",
+                fontSize: "clamp(1rem, 2.5vw, 1.2rem)",
                 fontWeight: 400,
                 lineHeight: "1.8",
                 letterSpacing: "-0.01em",

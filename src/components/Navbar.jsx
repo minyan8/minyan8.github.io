@@ -29,10 +29,12 @@ const Navigation = React.forwardRef((props, ref) => {
       style={{ transition: "all 0.3s ease" }}
     >
       <Container>
-        <Navbar.Brand className="navbar-brand" href={process.env.PUBLIC_URL + "/#home"} style={{ fontWeight: 500, fontSize: '1.1rem', letterSpacing: '-0.01em' }}>
+        <Navbar.Brand className="navbar-brand" href={process.env.PUBLIC_URL + "/#home"} style={{ fontWeight: 500, fontSize: 'clamp(1rem, 2vw, 1.1rem)', letterSpacing: '-0.01em' }}>
           {mainBody.firstName}
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler border-0" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler border-0">
+          <span className="navbar-toggler-icon"></span>
+        </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             {about.show && (

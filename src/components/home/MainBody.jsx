@@ -14,13 +14,21 @@ const MainBody = React.forwardRef(
           <h1
             ref={ref}
             className="display-1 mb-4 text-primary"
-            style={{ fontWeight: 700, letterSpacing: "-0.03em" }}
+            style={{ 
+              fontWeight: 700, 
+              letterSpacing: "-0.03em",
+              fontSize: "clamp(2.5rem, 8vw, 5rem)"
+            }}
           >
             {title}
           </h1>
           <div
-            className="lead mb-5 text-secondary"
-            style={{ fontSize: "24px", maxWidth: "700px", margin: "0 auto" }}
+            className="lead mb-5 text-secondary px-3"
+            style={{ 
+              fontSize: "clamp(1.1rem, 3vw, 1.5rem)", 
+              maxWidth: "700px", 
+              margin: "0 auto" 
+            }}
           >
             <Typist typingDelay={50}>{message}</Typist>
           </div>

@@ -15,13 +15,13 @@ const Skills = React.forwardRef(
             <div className="col-lg-10">
               <div className="row">
                 {/* Technical Skills */}
-                <div className="col-md-6 mb-5">
+                <div className="col-md-6 mb-5 px-4 px-md-3">
                   <h3 className="h4 fw-bold text-primary mb-4">
                     Technical Skills
                   </h3>
                   <p
                     className="text-secondary"
-                    style={{ fontSize: "17px", lineHeight: "1.8" }}
+                    style={{ fontSize: "clamp(15px, 2.5vw, 17px)", lineHeight: "1.8" }}
                   >
                     {hardSkills.map((skill, index) => (
                       <span key={`hard-skill-${index}`}>
@@ -35,11 +35,11 @@ const Skills = React.forwardRef(
                 </div>
 
                 {/* Soft Skills */}
-                <div className="col-md-6 mb-5">
+                <div className="col-md-6 mb-5 px-4 px-md-3">
                   <h3 className="h4 fw-bold text-primary mb-4">Soft Skills</h3>
                   <p
                     className="text-secondary"
-                    style={{ fontSize: "17px", lineHeight: "1.8" }}
+                    style={{ fontSize: "clamp(15px, 2.5vw, 17px)", lineHeight: "1.8" }}
                   >
                     {softSkills.map((skill, index) => (
                       <span key={`soft-skill-${index}`}>
@@ -53,11 +53,11 @@ const Skills = React.forwardRef(
                 </div>
 
                 {/* Languages */}
-                <div className="col-md-6 mb-5">
+                <div className="col-md-6 mb-5 px-4 px-md-3">
                   <h3 className="h4 fw-bold text-primary mb-4">Languages</h3>
                   <p
                     className="text-secondary"
-                    style={{ fontSize: "17px", lineHeight: "1.8" }}
+                    style={{ fontSize: "clamp(15px, 2.5vw, 17px)", lineHeight: "1.8" }}
                   >
                     {languages &&
                       languages.map((skill, index) => (

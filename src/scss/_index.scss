@@ -51,6 +51,11 @@ h1 {
 
   @media (max-width: 768px) {
     font-size: 48px;
+    line-height: 1.1;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 36px;
   }
 }
 
@@ -63,6 +68,10 @@ h2 {
   @media (max-width: 768px) {
     font-size: 32px;
   }
+  
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
 }
 
 p {
@@ -71,6 +80,15 @@ p {
   line-height: 1.4211;
   font-weight: 400;
   color: var(--text-secondary);
+  
+  @media (max-width: 768px) {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
 }
 
 a {
@@ -120,6 +138,10 @@ a {
   max-width: 980px;
   margin: 0 auto;
   padding: 0 20px;
+  
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
 }
 
 /* Button Styles */
@@ -140,6 +162,11 @@ a {
     color: white;
     background-color: #333;
   }
+  
+  @media (max-width: 480px) {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
 }
 
 .btn-apple-outline {
@@ -154,6 +181,11 @@ a {
   &:hover {
     background-color: var(--accent-color);
     color: white;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 9px 18px;
+    font-size: 15px;
   }
 }
 
@@ -177,13 +209,39 @@ a {
 /* Card hover effects */
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+  
+  @media (min-width: 769px) {
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+    }
   }
 }
 
-.hover-zoom:hover {
-  transform: scale(1.05);
+.hover-zoom {
+  @media (min-width: 769px) {
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  
+  .mb-5 {
+    margin-bottom: 2rem !important;
+  }
+  
+  .display-1 {
+    font-size: 3rem !important;
+  }
+  
+  .display-3 {
+    font-size: 2rem !important;
+  }
 }
