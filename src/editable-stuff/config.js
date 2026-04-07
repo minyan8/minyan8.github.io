@@ -118,6 +118,28 @@ const jobs = {
   heading: "Work Experience",
   data: [
     {
+      title: "Algorithm Engineer",
+      company: "Alibaba Group",
+      date: "2026.02 – Present",
+      location: "",
+      description: [
+        "Worked on agent-based systems for task planning and tool use in practical applications.",
+        "Contributed to multimodal understanding tasks by combining text and visual information.",
+        "Participated in post-training of MLLMs, including instruction tuning and alignment-related experiments.",
+      ],
+    },
+    {
+      title: "Machine Learning Engineer",
+      company: "Baidu Inc.",
+      date: "2025.08 – 2026.02",
+      location: "",
+      description: [
+        "Worked on agent workflows, including task decomposition, retrieval, and execution.",
+        "Contributed to AIGC projects with a focus on generation quality and controllability.",
+        "Participated in post-training of image-generation MLLMs to improve instruction following and visual consistency.",
+      ],
+    },
+    {
       title: "Machine Learning Researcher",
       company: "Huawei Canada",
       date: "May 2024 – Dec 2024",
@@ -126,17 +148,6 @@ const jobs = {
         "Conducted literature review and research on 3D Gaussian Splatting for 3D reconstruction and editing.",
         "Captured and reconstructed various real-world scenes by applying Structure from Motion (SfM) and 3D Gaussian Splatting, successfully creating an academic dataset for further research in the field of 3D Computer Vision.",
         "Co-author of a paper accepted by CVPR 2025 and contributor to a US patent.",
-      ],
-    },
-    {
-      title: "Software Engineer",
-      company: "MLOptic Corp.",
-      date: "Apr. 2023 – Jul. 2023",
-      location: "Nanjing, China",
-      description: [
-        "Led the development of advanced computer vision features for optic machines using C++/Qt, integrating OpenCV for robust image analysis to significantly enhance processing performance.",
-        "Accelerated lens correspondence detection by optimizing CUDA and OpenCV code.",
-        "Improved device performance by 40% and enhanced deployment reliability at Meta.",
       ],
     },
   ],
